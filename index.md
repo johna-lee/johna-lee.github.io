@@ -6,5 +6,4 @@ layout: single
 author_profile: true
 ---
 
-Sample text and image
-![alt]({{ site.url }}{{ site.baseurl }}/assets/images/stadium.png)
+# H1 Data Engineering Project #1: An End-to-End ELT Pipeline for Soccer Analysis
