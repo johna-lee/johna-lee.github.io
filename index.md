@@ -7,4 +7,4 @@ author_profile: true
 ---
 
 Sample text and image
-![image test](https://github.com/johna-lee/johna-lee.github.io/blob/master/assets/images/stadium.png)
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/stadium.png)
