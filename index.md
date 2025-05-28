@@ -4,7 +4,7 @@ classes: wide
 author_profile: true
 ---
 
-### Data Engineering Project: An End-to-End ELT Pipeline for Soccer Analysis
+#### Data Engineering Project: An End-to-End ELT Pipeline for Soccer Analysis
 
 This project is written from a hypothetical perspective, where I act as a consultant for my favorite soccer club, Arsenal. Arsenal is in desperate need of an attacker—an offensive forward whose main job is to score goals—but they are facing budgetary constraints. My task is to identify an ideal value candidate: a young, highly efficient, up-and-coming player who does not command a high transfer fee from the selling club.
 
