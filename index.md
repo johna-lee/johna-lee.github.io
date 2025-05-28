@@ -6,4 +6,4 @@ layout: single
 author_profile: true
 ---
 
-# H1 Data Engineering Project #1: An End-to-End ELT Pipeline for Soccer Analysis
+# Data Engineering Project #1: An End-to-End ELT Pipeline for Soccer Analysis
