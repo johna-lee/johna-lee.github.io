@@ -9,10 +9,16 @@
 
 section.page__content {
   p {
-    font-size: 0.75em;
+    font-size: 14px;
+  }
+}
+
+section.page__content {
+  li {
+    font-size: 12px;
   }
 }
 
 .page__title a[itemprop="url"] {
-  font-size: 0.75em;
+  font-size: 22px;
 }
