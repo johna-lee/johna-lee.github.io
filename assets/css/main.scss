@@ -8,5 +8,15 @@
 @import "minimal-mistakes";
 
 section.page__content {
-  font-size: 0.8em;
+  p,
+  li,
+  ul {
+    font-size: 0.8em;
   }
+}
+
+section.page__content {
+  h1 {
+    font-size: 1.2em;
+  }
+}
