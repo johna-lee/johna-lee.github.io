@@ -15,4 +15,4 @@ To do this I built the pipeline below, which handles batch match data and levera
 4. BigQuery serves as the data warehouse, where transformations are made and the dataset is exported to Power BI
 5. Power BI enables data analysis and visualizations to present the findings
 
-![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram.png)
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram.svg)
