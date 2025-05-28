@@ -14,5 +14,5 @@ group :jekyll_plugins do
   gem "jemoji"
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
-  gem "jekyll-titles-from-headings"
+  gem 'jekyll-titles-from-headings'
 end
