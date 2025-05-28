@@ -8,8 +8,12 @@
 @import "minimal-mistakes";
 
 section.page__content {
+  p,
+  li,
+  ul {
     font-size: 0.75em;
   }
+}
 
 .page__title a[itemprop="url"] {
   font-size: 0.75em;
