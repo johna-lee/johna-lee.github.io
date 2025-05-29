@@ -16,3 +16,4 @@ To do this I built the pipeline below, which handles batch match data and levera
 5. Power BI enables data analysis and visualizations to present the findings
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram.svg)
+
