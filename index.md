@@ -16,6 +16,5 @@ To do this I built the pipeline below, which handles batch match data and levera
 5. Power BI enables data analysis and visualizations to present the findings
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram-cropped.svg)
-
 #### The Data
 The data I selected is from the past three seasons of two European soccer tournaments: the UEFA Champions League (UCL) and the UEFA Europa League (UEL), resulting in six initial tables comprising an aggregated dataset. I chose these competitions because, although each country in Europe has a professional soccer league, the quality and competitiveness vary drastically. For example, someone who scores 30 goals in the Dutch Eredivisie is doing so against weaker opposition compared to the English Premier League, making it difficult to draw conclusions across leagues. However, in the UCL and UEL, the top teams from each country compete against one another, so performance should theoretically be more predictive. All match data was scraped from FBref.com, the most comprehensive free soccer database on the web.
