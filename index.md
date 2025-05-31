@@ -9,11 +9,11 @@ author_profile: true
 This project is written from a hypothetical perspective, where I act as a consultant for my favorite soccer club, Arsenal. Arsenal is in desperate need of an attacker—an offensive forward whose main job is to score goals—but they are facing budgetary constraints. My task is to identify an ideal value candidate: a young, highly efficient, up-and-coming player who does not command a high transfer fee from the selling club.
 
 To do this I built the pipeline below, which handles batch match data and leverages various services in Google Cloud Platform (GCP).
-1. Python and Pandas scrape data from the web, save it as a CSV file, and upload it to Google Cloud Storage (GCS)
-2. GCS stores a copy of the raw data before processing, to maintain data integrity
-3. Dataflow processes hundreds of CSV files and loads the data into BigQuery
-4. BigQuery serves as the data warehouse, where transformations are made and the dataset is exported to Power BI
-5. Power BI enables data analysis and visualizations to present the findings
+1. Python and Pandas scrape data from the web, save it as a CSV file, and upload it to Google Cloud Storage (GCS).
+2. GCS stores a copy of the raw data before processing, to maintain data integrity.
+3. Dataflow processes hundreds of CSV files and loads the data into BigQuery.
+4. BigQuery serves as the data warehouse, where transformations are made and the dataset is exported to Power BI.
+5. Power BI enables data analysis and visualizations to present the findings.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram-cropped.svg)
 
@@ -75,3 +75,5 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 #### Initial Exclusion Criteria
 * Player and Age – The first fields added to the matrix were "player" and a filter on age.
 * Filtering on Age – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
+* Filtering on "W" – As mentioned, I am looking for an attacker. Luckily, attackers in the forward line all contain a "W" in their position descriptions: forwards are labeled "FW", while left and right wingers are "LW" and "RW", respectively. To ensure all relevant data is captured, an advanced filter containing "W" is applied to the position field.
+
