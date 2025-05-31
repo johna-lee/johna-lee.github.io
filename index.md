@@ -85,11 +85,29 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 * Total Goals – I added a sum of goals and sorted the column in descending order to bring potential candidates into view within the matrix table.
 * Goals per 90 – Goals per 90 is a metric used to determine the average number of goals scored per 90 minutes—the length of a full soccer match. This metric is important because players can be substituted, and relying solely on the number of games played can be misleading. For example, if a player comes into two consecutive games in the 85th minute and scores a goal in each, it is technically not inaccurate to say they averaged one goal per game. However, scoring two goals in 10 minutes of total gametime is far more impressive than scoring two goals over two full games (approximately 180 minutes).
 * To add a Goals per 90 column, a new measure was created using the following calculation:
-    `goals_per_90 = ((SUM(match_data[goal]) / SUM(match_data[minute])) * 90)`
+      `goals_per_90 = ((SUM(match_data[goal]) / SUM(match_data[minute])) * 90)`
 * While Goals per 90 is a powerful metric, it cannot be relied on exclusively. As shown below, outliers can skew the data when minutes played are not also taken into consideration.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/goals per 90 incorrect.PNG)
 
-* Goals per 90 by Minutes – By plotting Goals per 90 against total Minutes, an interesting visual emerges. For the vast majority of players, the more total minutes played, the lower their Goals per 90 tends to be. However, there are a small number of players who do not follow this trend (circled below), and these are the players I want to focus on. They are maintaining a consistently high Goals per 90 despite an increasing number of total minutes. New filters of ≥ 1,000 Minutes and ≥ 0.5 Goals per 90 were applied to the dataset.
+* Goals per 90 by Minutes – By plotting Goals per 90 against total Minutes, an interesting visual emerges. For the vast majority of players, the more total minutes played, the lower their Goals per 90 tends to be. However, there are a small number of players who do not follow this trend (circled below), and these are the players I want to focus on. They are maintaining a consistently high Goals per 90 despite an increasing number of total minutes. New filters of ≥1,000 Minutes and ≥0.5 Goals per 90 were applied to the dataset.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/scatter.PNG)
+
+#### Efficiency Analysis
+* Goals to Expected Goals Ratio – Expected Goals (xG) is a metric that measures the quality of a goal-scoring opportunity by calculating the likelihood that it will be scored, based on data from similar shots in the past. In other words, a shot with an xG of 0.5 is expected to be scored half the time. Comparing the number of goals scored to xG provides a measure of efficiency, with a ratio greater than 1 indicating that a player is overperforming, while a ratio less than 1 indicates underperforming.
+* To add a Goals to Expected Goals Ratio column, a new measure was created with the following calculation:
+      `goals_to_xg_ratio = SUM(match_data[goal]) / SUM(match_data[expected_goal])`
+
+**Note:** The Goals to Expected Goals Ratio is not adjusted to “per 90,” since calculating a "Goals per 90 to Expected Goals per 90" ratio yields the same result.
+
+* A new filter of ≥1.00 Goals to Expected Goals Ratio was applied to the dataset.
+
+xg screenshot here
+
+* Shot Conversion Rate – Shot Conversion Rate is the percentage of shots that result in goals. This measures an attacker’s clinical finishing ability and is another indicator of efficiency in front of goal.
+
+* To add a Shot Conversion Rate column, a new measure was created with the following calculation:
+      `shot_conversion_rate = (SUM(match_data[goal]) / SUM(match_data[shot])) * 100`
+
+shot conversion screenshot here
