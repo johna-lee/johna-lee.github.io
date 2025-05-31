@@ -82,3 +82,6 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/powerbi contains w.PNG)
 
 #### Rate-Volume Analysis
+* Total Goals – I added a sum of goals and sorted the column in descending order to bring potential candidates into view within the matrix table.
+* Goals per 90 – Goals per 90 is a metric used to determine the average number of goals scored per 90 minutes—the length of a full soccer match. This metric is important because players can be substituted, and relying solely on the number of games played can be misleading. For example, if a player comes into two consecutive games in the 85th minute and scores a goal in each, it is technically not inaccurate to say they averaged one goal per game. However, scoring two goals in 10 minutes of total gametime is far more impressive than scoring two goals over two full games (approximately 180 minutes).
+* To add a Goals per 90 column, a new measure was created with the following calculation: `goals_per_90 = ((SUM(match_data[goal]) / SUM(match_data[minute])) * 90)`
