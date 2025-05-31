@@ -52,3 +52,4 @@ Second, a total of seven output tables were created in BigQuery—one for each o
 A Dataflow job was created for the initial competition and then cloned for the remaining ones. By targeting the competition folder in the GCS bucket, Dataflow read each file and loaded the data into the respective BigQuery tables. No errors occurred during the Dataflow jobs.
 
 #### BigQuery
+After the data was loaded into the BigQuery tables, simple transformations were performed. The first was creating two new columns—one titled "competition" and another "season"—as these are not found in the scraped data. The screenshot below shows the SQL query used, which created the columns and set the values for each record. This query was then cloned and adjusted for each respective table.
