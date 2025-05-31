@@ -32,4 +32,11 @@ I utilized Claude.ai to refine the script by adding a request delay and headers,
 The second script ([fbref_scraper.py](https://github.com/johna-lee/striker-project/blob/main/fbref_scraper.py){:target="_blank"}) was used to iterate through the match report URL CSVs and extract data for each player. As seen on the webpage for the first 2022–2023 UCL match ([FBref](https://fbref.com/en/matches/07f058d4/Dinamo-Zagreb-Chelsea-September-6-2022-Champions-League){:target="_blank"}), the main summary data is included in two tables—one for each team. However, these tables are sortable and contain multiple tabs of stats, which proved very challenging when defining the data I was looking for within the complex HTML structure.
 
 With some refinements using Claude.ai, I was able to identify the relevant tables based on key column headers. The script works by iterating through the URL CSVs, extracting the match ID from each URL, locating the relevant tables, and extracting player data from both teams into a single DataFrame. It then inserts additional columns for match ID and team name, saves the DataFrame as a CSV locally, uploads the CSV to a Google Cloud Storage (GCS) bucket, and generates a processing report detailing the result of each upload ([GCS processing reports](https://github.com/johna-lee/striker-project/tree/main/GCS%20processing%20reports){:target="_blank"}). The script includes minor data cleaning as well as request delays and headers to prevent rate limiting.
+
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/python+pandas GCS upload.PNG)
+
+#### Google Cloud Storage
+After each competition’s data was scraped and uploaded to the GCS bucket, I moved the CSV files into folders named by yearly competition (["match data" folders](https://github.com/johna-lee/striker-project){:target="_blank"}). This serves both as a record of the original files and as a way to provide a single path for Dataflow to target when loading the data into BigQuery.
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/GCS bucket data folders.PNG)
+
