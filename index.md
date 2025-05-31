@@ -53,3 +53,5 @@ A Dataflow job was created for the initial competition and then cloned for the r
 
 #### BigQuery
 After the data was loaded into the BigQuery tables, simple transformations were performed. The first was creating two new columns—one titled "competition" and another "season"—as these are not found in the scraped data. The screenshot below shows the SQL query used, which created the columns and set the values for each record. This query was then cloned and adjusted for each respective table.
+
+Insert Bigquery transformations screenshot
