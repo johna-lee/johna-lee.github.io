@@ -77,3 +77,8 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 * Filtering on Age – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
 * Filtering on "W" – As mentioned, I am looking for an attacker. Luckily, attackers in the forward line all contain a "W" in their position descriptions: forwards are labeled "FW", while left and right wingers are "LW" and "RW", respectively. To ensure all relevant data is captured, an advanced filter containing "W" is applied to the position field.
 
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/age less than 27.PNG)
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/powerbi contains w.PNG)
+
+#### Rate-Volume Analysis
