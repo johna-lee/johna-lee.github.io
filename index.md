@@ -62,4 +62,9 @@ The next action performed in BigQuery was to merge all six tables into a single 
 
 Lastly, the age column had to be transformed from a string in year-days format to an integer in years. The screenshot below shows the SQL queries used: a temporary column was created, nulls were assigned a value of 0, the string was split on the "-" delimiter, the original age column was deleted, and the updated column was renamed to age.
 
-Insert combined age screenshot
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/age transformations-cropped.svg)
+
+#### Power BI Desktop
+With the dataset now complete, the final step in the data pipeline was to import the merged "match_data" table into Power BI Desktop for analysis, as shown below.
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/powerbi load table.PNG)
