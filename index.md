@@ -36,7 +36,19 @@ With some refinements using Claude.ai, I was able to identify the relevant table
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/python+pandas GCS upload.PNG)
 
 #### Google Cloud Storage
-After each competition’s data was scraped and uploaded to the GCS bucket, I moved the CSV files into folders named by yearly competition (["match data" folders](https://github.com/johna-lee/striker-project){:target="_blank"}). This serves both as a record of the original files and as a way to provide a single path for Dataflow to target when loading the data into BigQuery.
+After each competition’s data was scraped and uploaded to the GCS bucket, I moved the CSV files into named folders. This serves both as a record of the original files and as a way to provide a single path for Dataflow to target when loading the data into BigQuery.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/GCS bucket data folders.PNG)
 
+#### Dataflow
+With the data in GCS, the next step was to load the roughly 900 CSV files into a BigQuery data warehouse using Dataflow. However, two things needed to be done before that could happen.
+
+First, I created a schema file ([bigquery_schema.json](https://github.com/johna-lee/striker-project/blob/main/bigquery_schema.json){:target="_blank"}) which defines the column names and data types of the output tables.
+
+Second, a total of seven output tables were created in BigQuery—one for each of the six competitions' successfully loaded data, and one for errors or data that was not loaded. The diagram below shows the load data flow, with the errors table on the bottom left titled "Insert bad records into Bigquery" and the competition table on the bottom right titled "Insert good records into Bigquery."
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/Dataflow diagram.PNG)
+
+A Dataflow job was created for the initial competition and then cloned for the remaining ones. By targeting the competition folder in the GCS bucket, Dataflow read each file and loaded the data into the respective BigQuery tables. No errors occurred during the Dataflow jobs.
+
+#### BigQuery
