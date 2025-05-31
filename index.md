@@ -73,9 +73,9 @@ With the dataset now complete, the final step in the data pipeline was to import
 Although the data has been extracted, loaded, transformed, and is ready for analysis, my job of finding an attacker is just beginning! The following bullet points highlight each stage of my analysis and the thought process behind it. Since I am familiar with pivot table formats, I chose a matrix table for my initial visualization.
 
 #### Initial Exclusion Criteria
-* Player and Age – The first fields added to the matrix were "player" and a filter on age.
-* Filtering on Age – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
-* Filtering on "W" – As mentioned, I am looking for an attacker. Luckily, attackers in the forward line all contain a "W" in their position descriptions: forwards are labeled "FW", while left and right wingers are "LW" and "RW", respectively. To ensure all relevant data is captured, an advanced filter containing "W" is applied to the position field.
+* **Player** – The first field added to the matrix was Player.
+* **Filtering on Age** – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
+* **Filtering on "W"** – As mentioned, I am looking for an attacker. Luckily, attackers in the forward line all contain a "W" in their position descriptions: forwards are labeled "FW", while left and right wingers are "LW" and "RW", respectively. To ensure all relevant data is captured, an advanced filter containing "W" is applied to the position field.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/age less than 27.PNG)
 
@@ -99,8 +99,8 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 #### Efficiency Analysis
 * **Goals to Expected Goals Ratio** – Expected Goals (xG) is a metric that measures the quality of a goal-scoring opportunity by calculating the likelihood that it will be scored, based on data from similar shots in the past. In other words, a shot with an xG of 0.5 is expected to be scored half the time. Comparing the number of goals scored to xG provides a measure of efficiency, with a ratio greater than 1 indicating that a player is overperforming, while a ratio less than 1 indicates underperforming.
 * To add a Goals to Expected Goals Ratio column, a new measure was created with the following calculation:  
-  `goals_to_xg_ratio = SUM(match_data[goal]) / SUM(match_data[expected_goal])`  
-  **Note:** The Goals to Expected Goals Ratio is not adjusted to “per 90,” since calculating a "Goals per 90 to Expected Goals per 90" ratio yields the same result.
+  `goals_to_xg_ratio = SUM(match_data[goal]) / SUM(match_data[expected_goal])`
+* **Note:** The Goals to Expected Goals Ratio is not adjusted to “per 90,” since calculating a "Goals per 90 to Expected Goals per 90" ratio yields the same result.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/goals to xg.PNG)
 
@@ -113,3 +113,4 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 
 * A new filter of ≥20% Shot Conversion Rate was applied to the dataset.
 
+#### Value Analysis
