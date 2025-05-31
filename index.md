@@ -68,3 +68,10 @@ Lastly, the age column had to be transformed from a string in year-days format t
 With the dataset now complete, the final step in the data pipeline was to import the merged "match_data" table into Power BI Desktop for analysis, as shown below.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/powerbi load table.PNG)
+
+#### The Analysis
+Although the data has been extracted, loaded, transformed, and is ready for analysis, my job of finding an attacker is just beginning! The following bullet points highlight each stage of my analysis and the thought process behind it. Since I am familiar with pivot table formats, I chose a matrix table for my initial visualization.
+
+#### Initial Exclusion Criteria
+* Player and Age – The first fields added to the matrix were "player" and a filter on age.
+* Filtering on Age – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
