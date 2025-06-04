@@ -125,6 +125,10 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 * A new filter of ≤50 (millions of €) was applied to the dataset.
 
 #### Conclusion
+The remaining three players were added to a clustered bar chart to visualize key metrics alongside transfer value. Not only is Santiago Gimenez the top performer, but he would also cost the least. As such, my recommendation to Arsenal is to sign Santiago Gimenez.
 
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/conclusion.PNG)
 
+Thank you for taking the time to review my first data engineering project. I'm excited to continue developing my skills and tackling new challenges!
 
+Have questions or feedback? Let's connect on ([LinkedIn](https://www.linkedin.com/in/johna-lee/){:target="_blank"}).
