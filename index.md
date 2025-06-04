@@ -70,7 +70,7 @@ With the dataset now complete, the final step in the data pipeline was to import
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/powerbi load table.PNG)
 
 #### The Analysis
-Although the data has been extracted, loaded, transformed, and is ready for analysis, my job of finding an attacker is just beginning! The following bullet points highlight each stage of my analysis and the thought process behind it. Since I am familiar with pivot table formats, I chose a matrix table for my initial visualization.
+Although the data has been extracted, loaded, transformed, and is ready for analysis, my job of finding an attacker is just beginning! The following bullet points highlight each stage of my analysis and the thought process behind it. Since I am familiar with pivot table formats, I chose a matrix table for my initial visualization and added new visualizations during each step of the process.
 
 #### Initial Exclusion Criteria
 * **Player** – The first field added to the matrix was Player.
@@ -114,3 +114,8 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 * A new filter of ≥20% Shot Conversion Rate was applied to the dataset.
 
 #### Value Analysis
+* **Transfer Value** – Transfer value, or the amount it would take to purchase a player from another club, is the final metric considered in my analysis. Since I am tasked with finding value, the ideal candidate is a player with high stats and a low cost. With only 8 players remaining, I manually added each player's transfer value from Transfermarkt.com, the most comprehensive soccer market value site.
+
+
+
+value is not always correlated with goal-scoring. Other skills such as dribbling, passing, etc may be an underlying reason for a player's value, but for the purposes of my analysis I am only concerned with goal-scoring.
