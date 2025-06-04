@@ -97,7 +97,7 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 * New filters of ≥1,000 Minutes and ≥0.5 Goals per 90 were applied to the dataset.
 
 #### Efficiency Analysis
-* **Goals to Expected Goals Ratio** – Expected Goals (xG) is a metric that measures the quality of a goal-scoring opportunity by calculating the likelihood that it will be scored, based on data from similar shots in the past. In other words, a shot with an xG of 0.5 is expected to be scored half the time. Comparing the number of goals scored to xG provides a measure of efficiency, with a ratio greater than 1 indicating that a player is overperforming, while a ratio less than 1 indicates underperforming.
+* **Goals to Expected Goals Ratio** – Expected Goals (xG) is a metric that measures the quality of a goalscoring opportunity by calculating the likelihood that it will be scored, based on data from similar shots in the past. In other words, a shot with an xG of 0.5 is expected to be scored half the time. Comparing the number of goals scored to xG provides a measure of efficiency, with a ratio greater than 1 indicating that a player is overperforming, while a ratio less than 1 indicates underperforming.
 * To add a Goals to Expected Goals Ratio column, a new measure was created with the following calculation:  
   `goals_to_xg_ratio = SUM(match_data[goal]) / SUM(match_data[expected_goal])`
 * **Note:** The Goals to Expected Goals Ratio is not adjusted to “per 90,” since calculating a "Goals per 90 to Expected Goals per 90" ratio yields the same result.
@@ -114,8 +114,17 @@ Although the data has been extracted, loaded, transformed, and is ready for anal
 * A new filter of ≥20% Shot Conversion Rate was applied to the dataset.
 
 #### Value Analysis
-* **Transfer Value** – Transfer value, or the amount it would take to purchase a player from another club, is the final metric considered in my analysis. Since I am tasked with finding value, the ideal candidate is a player with high stats and a low cost. With only 8 players remaining, I manually added each player's transfer value from Transfermarkt.com, the most comprehensive soccer market value site.
+* **Transfer Value** – Transfer value, or the amount it would take to purchase a player from another club, is the final metric considered in my analysis. Since I am tasked with finding value, the ideal candidate is a player with high performance and a low cost. With only eight players remaining, I manually added each player's transfer value from Transfermarkt.com, the most comprehensive site for soccer market values.
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/transfer matrix.PNG)
+
+* While goalscorers are typically considered the most valuable players in soccer, the matrix above shows that the correlation is not perfectly positive. Attributes such age, dribbling, passing, etc all contribute to a player's overall value. However, for the purposes of my analysis, I am only concerned with goalscoring. The chart below shows there are only three players significantly below the median value of remaining players.
+
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/transfer value.PNG)
+
+* A new filter of ≤50 (millions of €) was applied to the dataset.
+
+#### Conclusion
 
 
 
-value is not always correlated with goal-scoring. Other skills such as dribbling, passing, etc may be an underlying reason for a player's value, but for the purposes of my analysis I am only concerned with goal-scoring.
