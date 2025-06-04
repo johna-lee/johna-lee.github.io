@@ -73,9 +73,9 @@ With the dataset now complete, the final step in the data pipeline was to import
 Although the data has been extracted, loaded, transformed, and is ready for analysis, my job of finding an attacker is just beginning! The following bullet points highlight each stage of my analysis and the thought process behind it. Since I am familiar with pivot table formats, I chose a matrix table for my initial visualization and added new visualizations during each step of the process.
 
 #### Initial Exclusion Criteria
-* **Player** – The first field added to the matrix was Player.
-* **Filtering on Age** – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
-* **Filtering on "W"** – As mentioned, I am looking for an attacker. Luckily, attackers in the forward line all contain a "W" in their position descriptions: forwards are labeled "FW", while left and right wingers are "LW" and "RW", respectively. To ensure all relevant data is captured, an advanced filter containing "W" is applied to the position field.
+**Player** – The first field added to the matrix was Player.
+**Filtering on Age** – Age is one of the main criteria I’ve been tasked with in my search for the ideal player. While age is highly subjective, with players peaking at different times, the general consensus is that attackers reach their prime in their mid-to-late 20s. As such, I set the Age summarization to Maximum and filtered for players under 27 years old.
+**Filtering on "W"** – As mentioned, I am looking for an attacker. Luckily, attackers in the forward line all contain a "W" in their position descriptions: forwards are labeled "FW", while left and right wingers are "LW" and "RW", respectively. To ensure all relevant data is captured, an advanced filter containing "W" is applied to the position field.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/assets/images/age less than 27.PNG)
 
