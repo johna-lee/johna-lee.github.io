@@ -8,8 +8,8 @@ author_profile: true
 
 This project is presented from a hypothetical perspective, where I act as a consultant for my favorite soccer club, Arsenal. Arsenal is in desperate need of an attacker—an offensive forward whose main job is to score goals—but they are facing budgetary constraints. My task is to identify an ideal value candidate: a young, highly efficient, up-and-coming player who does not command a high transfer fee from the selling club.
 
-To achieve this I built the pipeline below, which processes batch match data and leverages various services in Google Cloud Platform (GCP).
-1. Python and Pandas scrape data from the web, save it as a CSV file, and upload it to Google Cloud Storage (GCS).
+To achieve this I built the pipeline below, which processes batch data and utilizes various services in Google Cloud Platform (GCP).
+1. Python and Pandas scrape match data from the web, save it as a CSV file, and upload it to Google Cloud Storage (GCS).
 2. GCS stores a copy of the raw data before processing, to maintain data integrity.
 3. Dataflow processes hundreds of CSV files and loads the data into BigQuery.
 4. BigQuery serves as the data warehouse, where transformations are made and the dataset is exported to Power BI.
