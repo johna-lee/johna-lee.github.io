@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: username
 github_username: username
 minimal_mistakes_skin: air
-search: false
+search: true
 
 # Build settings
 markdown: kramdown
@@ -57,16 +57,16 @@ plugins:
   - jekyll-titles-from-headings
 
 author:
-  name   : "John A. Lee"
+  name   : "John Lee"
   avatar : "/assets/images/stadium.png"
-  bio    : "Avid traveler and soccer fan interested in data engineering."
+  bio    : "Soccer fan and avid traveler interested in data engineering."
   links:
  #   - label: "Website"
  #     icon: "fas fa-fw fa-link"
  #     url: "https://"
- #   - label: "Twitter"
- #     icon: "fab fa-fw fa-twitter-square"
- #     url: "https://twitter.com/"
+    - label: "LinkedIn"
+      icon: "fa-linkedin"
+      url: "https://www.linkedin.com/in/johna-lee/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/johna-lee"
