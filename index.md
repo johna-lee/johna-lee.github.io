@@ -15,7 +15,7 @@ To achieve this I built the pipeline below, which processes batch data and utili
 4. BigQuery serves as the data warehouse, where transformations are made and the dataset is exported to Power BI.
 5. Power BI enables data analysis and visualizations to present the findings.
 
-![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram-cropped.svg)
+![alt]({{ site.url }}{{ site.baseurl }}/assets/images/pipeline_diagram-cropped (1).svg)
 
 All code and data used in this project can be found on my GitHub: [github.com/johna-lee/striker-project](https://github.com/johna-lee/striker-project){:target="_blank"}
 
