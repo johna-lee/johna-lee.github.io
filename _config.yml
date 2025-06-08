@@ -58,7 +58,7 @@ plugins:
 
 author:
   name   : "John Lee"
-  avatar : "/assets/images/stadium.png"
+  avatar : "assets/images/thumbnail_IMG_9943.jpg"
   bio    : "Soccer fan and travel enthusiast with a growing focus on data engineering."
   links:
     - label: "GitHub"
