@@ -61,9 +61,6 @@ author:
   avatar : "/assets/images/stadium.png"
   bio    : "Soccer fan and avid traveler interested in data engineering."
   links:
- #   - label: "Website"
- #     icon: "fas fa-fw fa-link"
- #     url: "https://"
     - label: "GitHub"
       icon: "fa-brands fa-github"
       url: "https://github.com/johna-lee"
@@ -75,7 +72,7 @@ author:
  #     url: "https://instagram.com/"
 
 footer:
- # links:
+  links:
     - label: "GitHub"
       icon: "fa-brands fa-github"
       url: "https://github.com/johna-lee"
