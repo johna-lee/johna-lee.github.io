@@ -59,7 +59,7 @@ plugins:
 author:
   name   : "John Lee"
   avatar : "assets/images/thumbnail_IMG_9943.jpg"
-  bio    : "Soccer fan and avid traveler with a growing focus on data engineering."
+  bio    : "Soccer fan and avid traveler learning data engineering."
   links:
     - label: "GitHub"
       icon: "fa-brands fa-github"
